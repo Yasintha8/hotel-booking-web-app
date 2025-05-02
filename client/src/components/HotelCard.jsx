@@ -1,15 +1,15 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const HotelCard = ({room, index}) => {
   return (
-    <div>
-        <Link to={'/rooms/' +room._id}
-            onClick={()=>
-                scrollTo(0,0)} key ={room._id}>
-            <img src={room.images[0]} alt="" className='relative max-w-70 w-full rounded-xl overflow-hidden bg-white text-gray-500/90 shadow-[0px_4px_4px_rgba(0,0,0,0.05)]' />
 
-            {index % 2 === 0 && <p className='px-3 py-1 absolute top-3 left-3 text-xs bg-white font-medium rounded-full'>Best Seller</p>}
+        <Link to={'/rooms/' +room._id} onClick={()=> scrollTo(0,0)} key ={room._id} 
+        className='relative max-w-70 w-full rounded-xl overflow-hidden bg-white text-gray-500/90 shadow-[0px_4px_4px_rgba(0,0,0,0.05)]'>
+            <img src={room.images[0]} alt="" />
+
+            {index % 2 === 0 && <p className='px-3 py-1 absolute top-3 left-3 text-xs bg-white text-gray-800 font-medium rounded-full'>Best Seller</p>}
 
             <div className='p-4 pt-5'>
                 <div className='flex items-center justify-between'>
@@ -30,7 +30,6 @@ const HotelCard = ({room, index}) => {
                 </div>
             </div>
             </Link>
-    </div>
   )
 }
 
