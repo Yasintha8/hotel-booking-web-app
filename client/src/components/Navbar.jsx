@@ -80,7 +80,7 @@ const Navbar = () => {
                     </UserButton>)
                     :
                     (<button onClick={openSignIn}
-                        className="bg-white text-black px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
+                        className="bg-gray-700 text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
                         Login
                     </button>)
                     }
