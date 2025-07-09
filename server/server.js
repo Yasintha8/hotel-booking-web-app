@@ -6,8 +6,10 @@ import { clerkMiddleware } from '@clerk/express'
 import clerkwebhooks from './controllers/clerkWebhooks.js';
 import userRouter from './routes/userRoutes.js';
 import hotelRouter from './routes/hotelRoutes.js';
+import connectCloudinary from './configs/cloudinary.js';
 
 connectDB()
+connectCloudinary();
 
 const app = express();
 app.use(cors()); //Enable Cross-origin Resource Sharing
