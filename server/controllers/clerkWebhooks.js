@@ -1,6 +1,5 @@
 import User from "../models/user.js";
 import { Webhook } from "svix";
-
 const clerkwebhooks = async (req, res) => {
     try{
         // Create a Svix instance with clerk webhook secret
@@ -18,7 +17,7 @@ const clerkwebhooks = async (req, res) => {
         await whook.verify(JSON.stringify(req.body), headers)
 
         // Getting Data from request body
-        const {data, type} = req.body;
+        const {data, type} = req.body
 
         const userData = {
             _id: data.id,

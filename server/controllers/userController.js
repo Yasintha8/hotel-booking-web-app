@@ -1,5 +1,5 @@
 //Get /api/user/
-export const getUserData = async () =>{
+export const getUserData = async (req, res) =>{
     try {
         const role = req.user.role;
         const recentSearchedCities = req.user.recentSearchedCities;

@@ -21,7 +21,7 @@ app.use(express.json()); //Parse JSON bodies
 app.use(clerkMiddleware())
 
 // API to use Clerk Webhooks
-app.use("/api/clerk", clerkwebhooks)
+app.use("/api/clerk", clerkwebhooks);
 
 app.get('/',(req, res)=> res.send('API is working!'));
 app.use('/api/user', userRouter)
