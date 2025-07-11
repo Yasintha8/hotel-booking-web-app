@@ -22,11 +22,10 @@ const userSchema = new mongoose.Schema({
         enum: ['user', 'hotelOwner'],
         default: 'user',
     },
-    recentSearchedCities: {
-        type: [String],
-        default: []
-}
-
+    recentSearchedCities: [{
+        type: String, 
+        required: true
+    }],
 },
 {
     timestamps: true
