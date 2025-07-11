@@ -13,15 +13,13 @@ import bookingRouter from './routes/bookingRoutes.js';
 connectDB()
 connectCloudinary();
 
+
 const app = express();
 app.use(cors()); //Enable Cross-origin Resource Sharing
-
+app.post("/api/clerk", express.raw({ type: "application/json" }), clerkwebhooks);
 // Middleware
 app.use(express.json()); //Parse JSON bodies
 app.use(clerkMiddleware())
-
-// API to use Clerk Webhooks
-app.use("/api/clerk", clerkwebhooks);
 
 app.get('/',(req, res)=> res.send('API is working!'));
 app.use('/api/user', userRouter)
