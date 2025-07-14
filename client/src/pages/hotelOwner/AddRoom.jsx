@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Tittle from '../../components/Tittle'
 import { assets } from '../../assets/assets'
-import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast'
+import { useAppContext } from '../../context/appContext'
 
 const AddRoom = () => {
 
