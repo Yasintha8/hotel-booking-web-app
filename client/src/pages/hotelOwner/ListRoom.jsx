@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Tittle from '../../components/Tittle'
-import { useAppContext } from '../../context/appContext'
+import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast'
 import { useEffect } from 'react'
 

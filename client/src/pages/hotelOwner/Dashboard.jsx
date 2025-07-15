@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Tittle from '../../components/Tittle'
-import { useAppContext } from '../../context/appContext'
+import { useAppContext } from '../../context/AppContext'
 import { useEffect } from 'react';
 import { assets } from '../../assets/assets';
 

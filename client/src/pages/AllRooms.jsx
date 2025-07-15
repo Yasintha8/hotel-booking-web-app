@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { assets, facilityIcons } from '../assets/assets'
 import StarRating from '../components/StarRating'
-import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/AppContext'
 import { useSearchParams } from 'react-router-dom'
 
 const CheckBox =({label, selected = false, onChange = ()=> { }})=>{
