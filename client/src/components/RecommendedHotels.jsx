@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useAppContext } from '../context/appContext';
+import { useAppContext } from '../context/AppContext';
 import HotelCard from './HotelCard'
 import Tittle from './Tittle'
 
