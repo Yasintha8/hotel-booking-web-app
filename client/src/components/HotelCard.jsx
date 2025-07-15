@@ -1,4 +1,3 @@
-// components/HotelCard.jsx
 import { assets } from '../assets/assets';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../context/appContext';
