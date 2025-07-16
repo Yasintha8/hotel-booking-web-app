@@ -1,6 +1,6 @@
 import { assets } from '../assets/assets';
 import { Link } from 'react-router-dom';
-import { useAppContext } from '../context/appContext';
+import { useAppContext } from '../context/AppContext';
 
 const CARD_HEIGHT = 'h-[22rem]';          // total card height
 const IMAGE_HEIGHT = 'h-[11rem] md:h-[12rem]'; // fixed banner image height
