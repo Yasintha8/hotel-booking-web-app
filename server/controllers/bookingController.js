@@ -70,7 +70,7 @@ export const createBooking = async (req, res) => {
         totalPrice *= nights; // Total price based on nights
 
         // Create a new booking
-        const Booking = await Booking.create({
+        const booking = await Booking.create({
             user,
             room,
             hotel: roomData.hotel._id,
