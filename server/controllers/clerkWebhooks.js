@@ -19,21 +19,26 @@ const clerkwebhooks = async (req, res) => {
         // Getting Data from request body
         const {data, type} = req.body
 
-        const userData = {
-            _id: data.id,
-            email: data.email_addresses[0].email_address,
-            username: data.first_name + " " + data.last_name,
-            image: data.image_url,
-        }
-
         // Switch Cases for different Events
         switch (type) {
             case "user.created":{
+                const userData = {
+                    _id: data.id,
+                    email: data.email_addresses[0].email_address,
+                    username: data.first_name + " " + data.last_name,
+                    image: data.image_url,
+                }
                 await User.create(userData);
                 break;
             }
 
             case "user.updated":{
+                const userData = {
+                    _id: data.id,
+                    email: data.email_addresses[0].email_address,
+                    username: data.first_name + " " + data.last_name,
+                    image: data.image_url,
+                }
                 await User.findByIdAndUpdate(data.id, userData);
                 break;
             }
