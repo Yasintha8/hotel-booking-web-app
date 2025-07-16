@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const bookingSchema = new mongoose.Schema({
-    usert: {
+    user: {
         type: String,
         ref: "User",
         required: true,
