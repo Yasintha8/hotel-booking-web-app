@@ -25,6 +25,23 @@ const MyBookings = () => {
         }
     }
 
+    const handlePayment = async (bookingId)=>{
+        try {
+            const {data} =await axios.post('/api/bookings/stripe-payment', {bookingId}, {
+                headers: {
+                    Authorization: `Bearer ${await getToken()}`
+                }
+            })
+            if(data.success){
+                window.location.href = data.url
+            }else {
+                toast.error(data.message)
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
+    }
+
     useEffect(() => {
         if(user){
             fetchUserBookings()
@@ -45,7 +62,7 @@ const MyBookings = () => {
             
             {
                 bookings.map((booking)=>(
-                    <div key={booking.id} className='grid grid-cols-1 md:grid-cols-[3fr_2fr_1fr] w-full border-b border-gray-300 py-6 first:border-t'>
+                    <div key={booking._id} className='grid grid-cols-1 md:grid-cols-[3fr_2fr_1fr] w-full border-b border-gray-300 py-6 first:border-t'>
                     {/* -----Hotel Details-------- */}
 
                     <div className=' flex flex-col md:flex-row'>
@@ -92,8 +109,10 @@ const MyBookings = () => {
                         </div>
                     {!booking.isPaid && (
                         <button 
+                            onClick={() => handlePayment(booking._id)}
                             className='px-4 py-1.5 mt-5 text-xs border border-gray-400 rounded-full hover:bg-gray-50 transition-all cursor-pointer'>
-                                Pay Now</button>
+                                Pay Now
+                        </button>
                     )}    
                     </div>
                     </div>
