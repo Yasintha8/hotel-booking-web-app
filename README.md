@@ -29,7 +29,7 @@ The application allows users to browse hotels and rooms, make secure bookings, a
 |-------------------|---------------------------------|
 | **MongoDB**       | Database                        |
 | **Express.js**    | Backend Framework               |
-| **React.js**      | Frontend Framework              |
+| **React.js**      | Frontend Library                |
 | **Node.js**       | Backend Runtime                 |
 | **Clerk**         | User Authentication             |
 | **Cloudinary**    | Image Upload & Management       |
